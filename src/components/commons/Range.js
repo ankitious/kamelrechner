@@ -1,5 +1,5 @@
 import React from 'react';
-import {Container, NameContainer, RangeContainer, RangeInput, RangeInputValueContainer, RangeValue} from "./style";
+import {Container, NameContainer, RangeInput, RangeInputValueContainer, RangeValue} from "./style";
 
 class Range extends React.Component {
     state = { value : 0 };

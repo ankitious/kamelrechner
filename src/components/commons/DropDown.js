@@ -1,8 +1,7 @@
 import React from 'react';
 import {
     Container,
-    NameContainer,
-    RangeContainer, Select,
+    NameContainer, Select,
     SelectContainer
 } from "./style";
 

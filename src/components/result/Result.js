@@ -1,5 +1,6 @@
 import React from 'react';
 import {Button, ButtonContainer} from "../home/style";
+import {ShareOnFacebook} from "./style";
 
 class Result extends React.Component {
 
@@ -19,6 +20,11 @@ class Result extends React.Component {
         return this.state.boyFriendWorth;
     };
 
+    sharePopUp = () => {
+        console.log('Hey');
+        window.open('https://www.facebook.com/sharer.php?u=https://naughty-bose-5b85ef.netlify.com/', '_blank', 'width=300,height=250')
+    };
+
     render(){
         return (
             <div style={{textAlign: 'center'}}>
@@ -34,15 +40,10 @@ class Result extends React.Component {
                 </h1>
                 <h1>Camels</h1>
 
-                <div className="fb-share-button"
-                     data-href="https://developers.facebook.com/docs/plugins/"
-                     data-layout="button_count"
-                     data-size="large">
-                    <a target="_blank"
-                       href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fdevelopers.facebook.com%2Fdocs%2Fplugins%2F&amp;src=sdkpreparse"
-                       className="fb-xfbml-parse-ignore">
-                    </a>
-                </div>
+
+                    <ShareOnFacebook className="fb_button" target="_blank" href="javascript:void(0);" onClick={this.sharePopUp}>Post
+                        on facebook</ShareOnFacebook>
+
 
                 <ButtonContainer>
                     <Button to={'/'}>Calculate Again?</Button>
